@@ -1,0 +1,78 @@
+<details class="methodology" id="methodology">
+	<summary>
+		<div>
+			<div class="section-number">A NOTE ON THE NUMBERS</div>
+			<h2>
+				Useful perspective,
+				<br />
+				<em>not a precise footprint.</em>
+			</h2>
+		</div>
+	</summary>
+	<div class="method-copy">
+		<p>
+			We multiply your prompt count by a published reference: ChatGPT's reported
+			average query (0.34 Wh and 0.000085 US gallons of water), Google's median
+			Gemini Apps text prompt (0.24 Wh and 0.26 mL), Mistral Large 2's 400-token
+			response (45 mL of water), BLOOM's average query (4 Wh), or a LLaMA 65B
+			benchmark response (approximately 0.3 Wh). The BLOOM and LLaMA figures are
+			reported in Google's research summary. Estimates with no water or energy
+			figure leave those results unavailable.
+		</p>
+		<p>
+			These studies use different methods and boundaries and are not directly
+			comparable. BLOOM was measured without batching; LLaMA was benchmarked on
+			specific hardware. Mistral's water figure includes upstream impacts. Long
+			prompts, reasoning, images, model choice, and infrastructure can change
+			the result substantially.
+		</p>
+		<p>
+			Carbon is an illustrative proxy, not actual emissions: energy is
+			multiplied by the US EPA's 2022 average electricity factor of 394 g
+			CO₂/kWh. Driving uses the EPA's 393 g CO₂e per mile for an average US
+			gasoline vehicle. Tree-days use its approximately 60.5 kg CO₂ per urban
+			tree per year averaged over 10 years; trees vary and do not instantly
+			offset emissions. The 10 W bulb and 250 mL cup are illustrative.
+		</p>
+		<p>
+			Food comparisons divide the carbon proxy by approximate food greenhouse
+			gas emissions. Bread assumes a 40 g slice of conventional baguette at 0.56
+			kg CO₂e per kg; beer assumes 330 mL at 0.771 kg CO₂e per litre. Both come
+			from one cradle-to-gate study, not global averages. Beef burger means only
+			a 100 g beef patty, not the bun, toppings or cooking, using the global
+			average of 99.48 kg CO₂e per kg of beef from beef herds. Serving sizes are
+			illustrative. Food CO₂e includes other greenhouse gases and has broader
+			boundaries than the electricity-only CO₂ proxy, so these are rough
+			comparisons, not measurements or offsets.
+		</p>
+		<p>
+			Results are not a full lifecycle assessment: training and other impacts
+			are not included. Water estimates have different boundaries; Google's
+			figure covers data-centre cooling, Mistral includes upstream impacts, and
+			OpenAI's disclosure does not explain its methodology. Mistral also reports
+			lifecycle emissions, but those are not used in the electricity-based
+			carbon proxy shown here.
+		</p>
+		<div class="sources">
+			<span>SOURCES</span>
+			<a href="https://blog.samaltman.com/the-gentle-singularity">
+				OpenAI disclosure ↗
+			</a>
+			<a href="https://arxiv.org/abs/2508.15734">Google research ↗</a>
+			<a href="https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai">
+				Mistral research ↗
+			</a>
+			<a href="https://arxiv.org/abs/2211.02001">BLOOM study ↗</a>
+			<a href="https://arxiv.org/abs/2310.03003">LLaMA study ↗</a>
+			<a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator-calculations-and-references">
+				US EPA ↗
+			</a>
+			<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13163583/">
+				Bread and beer study ↗
+			</a>
+			<a href="https://ourworldindata.org/grapher/ghg-per-kg-poore">
+				Food emissions data ↗
+			</a>
+		</div>
+	</div>
+</details>

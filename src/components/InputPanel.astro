@@ -1,0 +1,43 @@
+---
+import { estimates } from '../lib/impact'
+---
+
+<section class="input-panel" aria-labelledby="usage-title">
+	<div class="section-number">01 / YOUR USAGE</div>
+	<h2 id="usage-title">Let's keep it simple.</h2>
+	<p class="intro">Choose your AI usage and the estimate to apply.</p>
+
+	<form id="calculator" novalidate>
+		<label for="profile">Estimate to apply</label>
+		<div class="select-wrap">
+			<select id="profile" name="profile">
+				{Object.entries(estimates).map(([value, estimate]) => (
+					<option value={value}>{estimate.label}</option>
+				))}
+			</select>
+		</div>
+		<p class="field-help">Published reference points use different methods and are not directly comparable. Some report only water or energy.</p>
+
+		<label for="amount">How many prompts?</label>
+		<div class="amount-row">
+			<input id="amount" name="amount" type="number" min="0" max="1000000000" step="1" value="100" inputmode="numeric" required aria-describedby="amount-help error" />
+			<select id="period" name="period" aria-label="Usage period">
+				<option value="day" selected>
+					per day
+				</option>
+				<option value="month">per month</option>
+				<option value="year">per year</option>
+			</select>
+		</div>
+		<p class="field-help" id="amount-help">
+			A prompt is one message sent to the AI.
+		</p>
+		<p class="error" id="error" role="alert" hidden></p>
+		<button type="submit">
+			See my footprint <span aria-hidden="true">↗</span>
+		</button>
+	</form>
+	<div class="privacy-note">
+		<span aria-hidden="true">◎</span> Your usage stays in your browser.
+	</div>
+</section>

@@ -1,0 +1,5 @@
+dist
+.astro
+.fallow
+node_modules
+package-lock.json

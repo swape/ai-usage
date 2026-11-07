@@ -1,0 +1,53 @@
+---
+const periods = [
+	{ id: 'day', label: '1 day' },
+	{ id: 'month', label: '1 month' },
+	{ id: 'year', label: '1 year' },
+]
+
+const metrics = [
+	{ id: 'water', label: 'Water', unit: 'litres' },
+	{ id: 'energy', label: 'Energy', unit: 'kWh' },
+	{ id: 'carbon', label: 'Carbon proxy', unit: 'g CO₂' },
+	{ id: 'tree', label: 'Tree time', unit: 'tree-days' },
+	{ id: 'bread', label: 'Bread (40 g slices)', unit: 'slices' },
+	{ id: 'burger', label: 'Beef burger (100 g patty only)', unit: 'patties' },
+	{ id: 'beer', label: 'Beer (330 mL)', unit: 'beers' },
+]
+---
+
+<section
+	class="period-results"
+	id="period-results"
+	aria-labelledby="period-results-title"
+	hidden
+>
+	<div class="section-number">03 / YOUR USAGE OVER TIME</div>
+	<h2 id="period-results-title">A little perspective over time.</h2>
+	<p class="results-intro">
+		The same usage and estimate, averaged over a day, month and year. Assumes
+		steady usage, 365 days per year and 12 equal months. Food comparisons use
+		different emissions boundaries; see the note below. A dash means the metric
+		is unavailable.
+	</p>
+	<div class="period-grid">
+		{periods.map(({ id, label }) => (
+			<article class="period-card">
+				<h3>{label}</h3>
+				<p>
+					<strong id={`${id}-prompts`}>—</strong> prompts on average
+				</p>
+				<dl>
+					{metrics.map((metric) => (
+						<div>
+							<dt>{metric.label}</dt>
+							<dd>
+								<span id={`${id}-${metric.id}`}>—</span> {metric.unit}
+							</dd>
+						</div>
+					))}
+				</dl>
+			</article>
+		))}
+	</div>
+</section>

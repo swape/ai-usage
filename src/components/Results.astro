@@ -1,0 +1,155 @@
+<section
+	class="results"
+	id="results"
+	aria-labelledby="results-title"
+	aria-live="polite"
+	hidden
+>
+	<div class="results-heading">
+		<div>
+			<div class="section-number">02 / YOUR ESTIMATE</div>
+			<h2 id="results-title">The bigger picture.</h2>
+		</div>
+		<span class="period-badge" id="period-label">
+			PER DAY
+		</span>
+	</div>
+	<p class="results-intro" id="result-summary">
+		Based on 100 prompts per day.
+	</p>
+	<p class="results-intro" id="result-basis">
+		ChatGPT average query reference.
+	</p>
+	<div class="result-grid">
+		<article class="result-card water">
+			<div class="card-top">
+				<span>WATER CONSUMED</span>
+				<span class="icon" aria-hidden="true">
+					◡
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="water">—</strong>
+				<span>litres</span>
+			</div>
+			<p id="water-comparison">
+				About <b id="cups">—</b> cups of water <small>(250 mL each)</small>
+			</p>
+			<p id="water-unavailable" hidden>
+				Water is not available for this estimate.
+			</p>
+		</article>
+		<article class="result-card energy">
+			<div class="card-top">
+				<span>ENERGY USED</span>
+				<span class="icon" aria-hidden="true">
+					ϟ
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="energy">—</strong>
+				<span>kWh</span>
+			</div>
+			<p id="energy-comparison">
+				Like a 10 W LED bulb for <b id="bulb">—</b> hours
+			</p>
+			<p id="energy-unavailable" hidden>
+				Energy is not available for this estimate.
+			</p>
+		</article>
+		<article class="result-card carbon">
+			<div class="card-top">
+				<span>CARBON PROXY</span>
+				<span class="icon" aria-hidden="true">
+					◌
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="carbon">—</strong>
+				<span>g CO₂</span>
+			</div>
+			<p id="carbon-comparison">
+				Comparable to <b id="car">—</b> km driven in an average US car
+			</p>
+			<p id="carbon-unavailable" hidden>
+				Carbon proxy is unavailable without an energy estimate.
+			</p>
+		</article>
+		<article class="result-card trees">
+			<div class="card-top">
+				<span>IN TREE TERMS</span>
+				<span class="icon" aria-hidden="true">
+					♧
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="tree">—</strong>
+				<span>tree-days</span>
+			</div>
+			<p id="tree-comparison">
+				Approximate time for one urban tree to absorb this CO₂
+			</p>
+			<p id="tree-unavailable" hidden>
+				Tree comparison is unavailable without an energy estimate.
+			</p>
+		</article>
+		<article class="result-card">
+			<div class="card-top">
+				<span>BREAD</span>
+				<span class="icon" aria-hidden="true">
+					🥖
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="bread">—</strong>
+				<span>slices</span>
+			</div>
+			<p id="bread-comparison">
+				Approximate carbon equivalent of bread slices (40 g each)
+			</p>
+			<p id="bread-unavailable" hidden>
+				Comparison unavailable without an energy estimate.
+			</p>
+		</article>
+		<article class="result-card">
+			<div class="card-top">
+				<span>BEER</span>
+				<span class="icon" aria-hidden="true">
+					🍺
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="beer">—</strong>
+				<span>beers</span>
+			</div>
+			<p id="beer-comparison">
+				Approximate carbon equivalent of beers (330 mL each)
+			</p>
+			<p id="beer-unavailable" hidden>
+				Comparison unavailable without an energy estimate.
+			</p>
+		</article>
+		<article class="result-card">
+			<div class="card-top">
+				<span>BEEF BURGER</span>
+				<span class="icon" aria-hidden="true">
+					🍔
+				</span>
+			</div>
+			<div class="metric">
+				<strong id="burger">—</strong>
+				<span>patties</span>
+			</div>
+			<p id="burger-comparison">
+				Approximate carbon equivalent of beef patties (100 g each; patty only)
+			</p>
+			<p id="burger-unavailable" hidden>
+				Comparison unavailable without an energy estimate.
+			</p>
+		</article>
+	</div>
+	<p class="estimate-note">
+		<span aria-hidden="true">✳</span> Estimates, not measurements. Food
+		comparisons use different emissions boundaries; see the note below.
+	</p>
+</section>

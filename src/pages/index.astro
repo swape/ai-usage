@@ -1,22 +1,41 @@
 ---
-import '../styles/global.css';
-
-const title: string = 'AI Usage';
+import { Font } from 'astro:assets'
+import '../styles/global.css'
+import SiteHeader from '../components/SiteHeader.astro'
+import Hero from '../components/Hero.astro'
+import InputPanel from '../components/InputPanel.astro'
+import Results from '../components/Results.astro'
+import PeriodResults from '../components/PeriodResults.astro'
+import Methodology from '../components/Methodology.astro'
+import SiteFooter from '../components/SiteFooter.astro'
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Explore an illustrative estimate of the environmental impact of AI text prompts."
+		/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>AI Footprint — a little perspective on AI usage</title>
+		<Font cssVariable="--font-body" />
+		<Font cssVariable="--font-heading" />
 	</head>
 	<body>
+		<SiteHeader />
 		<main>
-			<h1>{title}</h1>
-			<p>A starting point for an AI usage calculator.</p>
+			<Hero />
+			<div class="calculator-layout">
+				<InputPanel />
+				<Results />
+			</div>
+			<PeriodResults />
+			<Methodology />
 		</main>
+		<SiteFooter />
+		<script src="../scripts/calculator.ts"></script>
 	</body>
 </html>
